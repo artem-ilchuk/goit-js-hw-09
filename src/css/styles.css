@@ -16,3 +16,159 @@
 @import url('./badges.css');
 @import url('./back-link.css');
 @import url('./footer.css');
+
+/*------------Navigation-------*/
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@keyframes slideme {
+  0% {
+    left: -30px;
+    margin-left: 0px;
+  }
+  30% {
+    left: 110%;
+    margin-left: 80px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
+
+.nav-button {
+  overflow: hidden;
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: #4eff5a;
+  border-radius: 8px;
+  margin-top: 16px;
+}
+
+.nav-button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -200px;
+  width: 60px;
+  height: 100px;
+  background-color: #fff;
+  filter: blur(30px);
+  transform: skewX(30deg) translateZ(0);
+  transition: 1s;
+  animation-name: slideme;
+  animation-duration: 3s;
+  animation-delay: 0.05s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+/*------------Gallery---------*/
+body {
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 24px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.gallery-image {
+  max-width: 360px;
+  height: 200px;
+}
+.gallery-image:hover {
+  transform: scale(1.05);
+}
+.simple-lightbox {
+  background: rgba(46, 47, 66, 0.8);
+}
+
+/*----------- Form -----------*/
+
+.feedback-form {
+  margin-top: 24px;
+}
+
+.block {
+  display: block;
+}
+
+.text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.box {
+  width: 360px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  outline: none;
+  padding: 8px 16px;
+}
+
+.box:hover,
+.box:focus {
+  border: 1px solid #000;
+}
+
+.box:active {
+  border: 1px solid #808080;
+}
+
+.textarea {
+  height: 80px;
+  resize: none;
+}
+
+.blue-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 16px;
+}
+
+.blue-button:hover,
+.blue-button:focus {
+  background-color: #6c8cff;
+}

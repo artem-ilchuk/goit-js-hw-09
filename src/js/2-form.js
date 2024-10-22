@@ -1,8 +1,8 @@
 let formData = { email: '', message: '' };
 const LS_Key = 'feedback-form-state';
 const form = document.querySelector('.feedback-form');
-const formEmail = document.querySelector('.block text box');
-const formMessage = document.querySelector('.block text box textarea');
+const formEmail = document.querySelector('#email');
+const formMessage = document.querySelector('#textarea');
 
 const localData = JSON.parse(localStorage.getItem('feedback-form-state'));
 
